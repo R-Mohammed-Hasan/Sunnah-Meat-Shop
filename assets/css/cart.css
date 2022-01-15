@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sunnah {
+    color: white;
+    margin-right: 40%;
+    animation: move 4s infinite;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Rampart One';
+    font-size: 50px;
+}
+
+.hr {
+    border: 2px solid black;
+}
+
+.topic {
+    background-color: grey;
+    color: aqua;
+    text-align: right;
+    padding: 0.5%;
+    width: 100%;
+    height: 19%;
+}
+
+.navbar {
+    position: absolute;
+    padding-left: 1%;
+    left: -26vw;
+    width: 24vw;
+    height: 100vh;
+    background-color: grey;
+    transition: all .5s;
+    z-index: 1000;
+}
+
+.navhead {
+    display: flex;
+    text-align: center;
+    padding-left: 25%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 25px;
+    border-bottom: 1px solid white;
+}
+
+.navhead a {
+    text-decoration: none;
+}
+
+.nav-open {
+    left: 0;
+    z-index: 1000;
+    box-shadow: 10px 0px 20px black;
+    border-top-right-radius: 20px;
+}
+
+.icon {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.icon:focus {
+    top: 2%;
+    transform: rotate(180deg);
+}
+
+.navbar .icon {
+    position: absolute;
+    left: 5%;
+}
+
+input[type=search] {
+    width: 80px;
+    height: 30px;
+    transition: width 2s;
+    padding: 0px 10px;
+}
+
+input[type=search]:hover {
+    width: 300px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover:not(.emptyCart a) {
+    transition: all .4s;
+    background-color: black;
+    color: aqua;
+    padding: 1.5%;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+@keyframes move {
+    50% {
+        color: black;
+    }
+}
+
+nav {
+    background-color: black;
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    font-family: monospace;
+    text-align: center;
+    padding: 1% 0%;
+    margin-left: 30%;
+    margin-top: 1%;
+    width: 40%;
+    border-radius: 5px;
+}
+
+table {
+    text-align: center;
+    width: 90vw;
+    height: auto;
+    margin: 1% 5%;
+    font-family: monospace;
+    border-radius: 15px;
+}
+
+th,
+td {
+    padding: 40px 30px;
+    font-size: 20px;
+}
+
+.itemName {
+    display: inline-block;
+    font-size: 25px;
+}
+
+td img {
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: green;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.remove-btn {
+    padding: 4px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#totalAmount {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.emptyCart {
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.emptyCart button {
+    margin-top: 1%;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    background-image: linear-gradient(30deg, rgb(62, 177, 62) 20%, white);
+}
+
+.emptyCart a {
+    text-decoration: none;
+}
+
+.emptyCart a:hover {
+    cursor: pointer;
+}

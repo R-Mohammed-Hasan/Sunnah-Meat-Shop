@@ -1,0 +1,86 @@
+body {
+    background-image: url('../images/signup.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 110%;
+}
+
+#signup {
+    animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        font: 20px bold
+    }
+}
+
+#forgot,
+#signup a {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+input:focus {
+    background-color: antiquewhite;
+}
+
+#forgot:hover {
+    border: 2px solid black;
+    background: white;
+    color: red;
+    border-radius: 10px;
+}
+
+#signup:hover {
+    border: 2px solid black;
+    background: white;
+    color: red;
+    border-radius: 10px;
+}
+
+input[type=email] {
+    width: 257px;
+    padding: 5px;
+}
+
+input {
+    border-radius: 15px;
+    padding: 5px;
+}
+
+input[type=tel] {
+    width: 260px;
+}
+
+#password {
+    width: 253px;
+    vertical-align: middle;
+}
+
+#errorMessage {
+    color: red;
+    background: white;
+    display: inline-flex;
+    width: 220px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.hr {
+    border: 2px solid black;
+    width: 90%;
+}
+
+table {
+    margin-left: 37%;
+    width: 30%;
+}
+
+th,
+td {
+    padding: 1%;
+}

@@ -1,0 +1,267 @@
+body {
+    overflow-x: hidden;
+    margin-left: 1%;
+}
+
+.sunnah {
+    color: white;
+    margin-right: 40%;
+    animation: move 4s infinite;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Rampart One';
+    font-size: 50px;
+}
+
+.topic {
+    background-color: grey;
+    color: aqua;
+    text-align: right;
+    padding: 0.5%;
+    width: 100%;
+    height: 21%;
+}
+
+marquee {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    z-index: 100;
+    font-size: 23px;
+    color: white;
+    background-color: grey;
+    margin-bottom: 5px;
+    padding: .5%;
+    border-bottom: 3px solid black;
+}
+
+.div1 {
+    width: 30%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    position: fixed;
+    margin-left: 15px;
+    margin-top: .5%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.div1 img:hover {
+    opacity: 70%;
+}
+
+.chicken-img {
+    position: absolute;
+    background: orange;
+    width: 320px;
+    height: 100px;
+    left: -155px;
+    transition: left .6s;
+}
+
+.chicken-img:hover {
+    left: 0px;
+}
+
+.mutton-img {
+    margin-top: 230px;
+    position: absolute;
+    background: red;
+    width: 320px;
+    height: 100px;
+    left: -155px;
+    transition: left .6s;
+}
+
+.mutton-img:hover {
+    left: 0px;
+}
+
+.chickeneggs-img {
+    margin-top: 130px;
+    position: absolute;
+    background: yellow;
+    width: 360px;
+    height: 100px;
+    left: -195px;
+    transition: left .6s;
+}
+
+.chickeneggs-img:hover {
+    left: 0px;
+}
+
+.kadai-img {
+    margin-top: 325px;
+    position: absolute;
+    background: grey;
+    width: 360px;
+    height: 100px;
+    left: -195px;
+    transition: left .6s;
+}
+
+.kadai-img:hover {
+    left: 0px;
+}
+
+.kadai-eggs-img {
+    margin-top: 420px;
+    position: absolute;
+    background: black;
+    width: 360px;
+    height: 100px;
+    left: -195px;
+    transition: left .6s;
+}
+
+.kadai-eggs-img:hover {
+    left: 0px;
+}
+
+.duck-img {
+    margin-top: 520px;
+    position: absolute;
+    background: aqua;
+    width: 360px;
+    height: 100px;
+    left: -195px;
+    transition: left .6s;
+}
+
+.duck-img:hover {
+    left: 0px;
+}
+
+.div2 {
+    width: 68%;
+    height: 95vh;
+    box-shadow: 0px 0px 20px grey;
+    left: 31%;
+    padding-left: 15px;
+    position: absolute;
+    font-size: 20px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a[href^=sunnah_lo]:hover,
+a[href^=membership]:hover {
+    background: black;
+    color: aqua;
+    opacity: 100%;
+    border-radius: 10px;
+}
+
+a:hover {
+    opacity: 50%;
+}
+
+.icon {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.icon:focus {
+    top: 2%;
+    transform: rotate(180deg);
+}
+
+.navbar {
+    position: absolute;
+    padding-left: 1%;
+    left: -26vw;
+    width: 25vw;
+    height: 100vh;
+    background-color: grey;
+    transition: all .5s;
+    z-index: 1000;
+}
+
+.navhead {
+    display: flex;
+    text-align: center;
+    padding-left: 25%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom: 1px solid white;
+}
+
+.nav-open {
+    left: 0;
+    z-index: 1000;
+    box-shadow: 10px 0px 20px black;
+    border-top-right-radius: 20px;
+}
+
+.submit {
+    font-style: italic;
+    width: 5.5%;
+    top: 0;
+    border-radius: 15px;
+    animation: mymove 1s infinite;
+    border: 2px solid black;
+}
+
+.submit:hover {
+    top: 10;
+}
+
+input[type=search] {
+    width: 82px;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    transition: width 2s;
+    background-image: url('./../images/search.png');
+    background-repeat: no-repeat;
+    background-size: 30px 17px;
+    background-position: right;
+}
+
+input[type=search]:hover {
+    width: 300px;
+}
+
+@keyframes mymove {
+    20% {
+        margin-left: 5px;
+    }
+}
+
+@keyframes move {
+    50% {
+        color: black;
+    }
+}
+
+.marquee {
+    animation: marquee 25s linear infinite;
+    font-size: 23px;
+    font-weight: 530;
+    margin-bottom: 1%;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

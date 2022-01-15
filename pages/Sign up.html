@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="../assets/css/SignUp.css">
+</head>
+
+<body>
+    <form onsubmit="checkValidations(event)" align=center>
+        <br>
+        <img src="../assets/images/signup_icon_black.svg" style="vertical-align:middle;" width=70 height=70 alt="Sign up Image">&nbsp;
+        <h1 style="display: inline-block;">Sign Up</h1>
+        <br><br>
+        <hr class="hr">
+        <br>
+        <div><label> First Name:</label> <input id="fname" type="text" autofocus pattern="[a-zA-Z]{3,}" title="Please enter more than 3 characters" name="fname" placeholder="First Name" required></div>
+        <div><label> Last Name:</label> <input id="lname" type="text" pattern="[A-Za-z]{0,}" title="Please enter more than 3 characters" name="lname" placeholder="Last Name" required></div>
+        <div><label>E-mail Id:</label> <input id="mailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" placeholder="Enter your mail Id" required>
+            <br> Eg: albert07@gmail.com</div>
+        <div> <label>D.O.B :</label><input id="dob" type="date" name="dob" required></div>
+        <div><label> Password:</label> <input id="password" type="password" pattern="[A-Za-z0-9.+/_!$%&\|*()]{12,}" title="Your password should contain a minimum 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="password" placeholder="Enter your password"
+                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="pShow" onclick="show()" src="../assets/images/eye-close.svg"></div>
+        <div> <label>Confirm Password:</label> <input id="cPassword" type="password" pattern="[A-Za-z0-9]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="pass" placeholder="Re-Enter your password"
+                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="cpShow" onclick="show1()" src="../assets/images/eye-close.svg"></div>
+        <div><label>Phone Number: </label><input id="number" pattern="[0-9]{10}" title="Enter only numbers" type="tel" minlength="9" maxlength="10" name="number" placeholder="Enter your mobile number" required></div>
+        <div><label> Role :</label>
+            <select id="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+        <div id="errorMessage" style="background-color: white;padding:4px;display: inline-block;"></div><br />
+        <p><button type="submit" name="submit" value="Submit" style="padding:5px;border:2px solid black;">Submit</button>
+            <button type="reset" name="reset" value="Reset" style="padding:5px;margin-left:20px;border:2px solid black;">Reset</button>
+        </p>
+
+    </form>
+    <br>
+    <div class="moreInfo">
+        <a href="home.html">Click here for more info
+    </a>
+    </div>
+
+    <script type="text/javascript" src="../assets/js/signUp.js"></script>
+
+</body>
+
+</html>

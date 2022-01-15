@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./../assets/css/cart.css">
+
+
+</head>
+
+<body>
+    <div class="topic">
+        <input type="image" alt="input" src="./../assets/images/icon.png" width='4%' class="icon" onclick="navbar()">
+        <div class="navbar">
+            <input type="image" alt="input" src="./../assets/images/icon.png" width='15%' height='7.5%' class="icon" onclick="navbar()">
+            <p style="font-size:35px;font-weight: 900;padding-right: 180px;color:black;">
+                <span style="margin: 0px;margin-top: 100px;align-items: center;">Menu Bar</span>
+            </p><br>
+            <hr class="hr">
+            <p class="navhead"><a href="./home.html">Home</a></p>
+            <p class="navhead"><a href="./home.html">Contact Us</a></p>
+            <p class="navhead"><a href="./cart.html">Cart</a></p>
+        </div>
+        <h1 class="sunnah"><img src="./../assets/images/sunnah logo.jpg" alt="" width='15%' style="vertical-align:middle;margin-right:2%;"> Sunnah Meat Shop
+        </h1>
+        <input type="search" name="search" placeholder="Search your product" style="border-radius:15px;vertical-align: middle">
+        <img src="./../assets/images/search.png" alt="" width="30px" height="20px" style="vertical-align:middle ;">
+        <span style="margin:2%;" title="Our Home Page">HOME</span>
+        <a href="login.html" style="margin:2%;padding:.5%;">LOGIN</a>
+        <a href="Sign up.html" style="margin:2%;margin-right:5%;padding:.5%;">BECOME A MEMBER</a>
+        <hr>
+    </div>
+    <nav>
+        <div>Your Cart
+            <img src="./../assets/images/cart.svg" alt="Cart">
+        </div>
+    </nav>
+    <main>
+        <table id="insertingItems" border="8">
+            <caption></caption>
+            <th scope="row">
+                <div class="emptyCart">
+                    Your Cart is empty <br> <button><a href="./subItems.html"> Add Now ?</a></button>
+                </div>
+            </th>
+
+
+
+
+
+        </table>
+    </main>
+
+    <script src="./../assets/js/cart.js"></script>
+</body>
+
+</html>

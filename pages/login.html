@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+</head>
+
+<body align="center">
+    <h1 color: 'white'> Login Page</h1>
+    <hr class="hr"><br />
+    <img src="../assets/images/login.jpg" height=150 width=150 alt="Login" style="border-radius:15px;">
+    <br /><br /><br />
+    <form onsubmit="mailCheck(event);">
+        <table border="4" style="background-color:white">
+            <caption></caption>
+            <tr>
+                <th scope="col"> E-mail Id: </th>
+                <td> <input id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="mail id" placeholder="Your mail-id eg.abcd@gmail.com" autofocus required></td>
+            </tr><br />
+            <tr>
+                <th scope="col">Password: </th>
+                <td> <input id="password" pattern="[A-Za-z0-9._%+-]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" type="password" name="password" placeholder="Password" required>&nbsp;
+                    <img alt="Password Hide" style="position:absolute;" id="images" onclick="show()" src="../assets/images/eye-close.svg">
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">Phone number: </th>
+                <td><input id="phoneNumber" type="tel" pattern="[0-9]{10}" title="Enter only 10 numbers" minlength="9" maxlength="10" id="number" name='number' placeholder="Your Contact number" required></td>
+            </tr>
+        </table><br />
+        <div id="errorMessage"></div>
+        <br /><br />
+        <a id="forgot" href="forgot.html" style="padding:5px;">Forgot Password ..?</a><br /><br />
+        <span>
+      <input type="submit" name="button" value="Submit" style="border-radius:0px;border:3px solid black;">
+    </span><br />
+        <p>Or<br /><br />Login with Google<br /><br /><img alt="Google Icon" src="../assets/images/google.jpg" width="50px" height="50px" style="border-radius:15px;">
+            <p>Don't have an account ? </p>
+            <a id="signup" href="Sign up.html" style="padding:5px;"> Sign up here
+    </a>
+            <br /><br /><br /><br /><br />
+            <a href="#"><img alt="Instagram Icon" src="../assets/images/insta.jpg" width='50px' height='50px' style="border-radius:15px;"></a>&nbsp&nbsp&nbsp&nbsp
+            <a href="#"><img alt="Facebook Icon" src="../assets/images/facebook.jpg" width="50px" height='50px' style="border-radius:15px;"></a>&nbsp&nbsp&nbsp&nbsp
+            <a href="#"><img alt="Twitter Icon" src="../assets/images/twitter.jpg" width="50px" height='50px' style="border-radius:15px;"></a>
+
+    </form>
+    <script type="text/javascript" src="../assets/js/login.js">
+    </script>
+
+</body>
+
+</html>
