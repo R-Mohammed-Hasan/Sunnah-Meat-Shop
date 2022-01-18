@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="./../assets/css/addItem.css">
+</head>
+
+<body>
+    <h1> <img src="./../assets/images/course_icon.png" width="3%" height="5%" alt=""> Adding Item</h1>
+    <form align='center' onsubmit="onSubmitHandler(event)">
+        <div> Name of Item : <input type="text" name="" id="name" autofocus required></div>
+        <div>Main Image : <input type="url" name="" id="mainImage" required>
+        </div>
+        <h2>Varieties</h2>
+        <div>Variety 1 Name : <input type="text" name="" id="variety1Name" required></div>
+        <div>Image : <input type="url" name="" id="image1" required></div>
+        <div>Market Price : ₹ <input type="number" name="" id="marketPrice1" required></div>
+        <div>Our Price : ₹ <input type="number" name="" id="ourPrice1" required></div>
+        <div>Variety 2 Name : <input type="text" name="" id="variety2Name" required></div>
+        <div>Image : <input type="url" name="" id="image2" required></div>
+        <div>Market Price : ₹ <input type="number" name="" id="marketPrice2" required></div>
+        <div>Our Price : ₹ <input type="number" name="" id="ourPrice2" required></div>
+        <div id="error"></div>
+        <div><input type="submit" value="Add Item"></div>
+
+    </form>
+
+    <script src="./../assets/js/addItem.js"></script>
+</body>
+
+</html>

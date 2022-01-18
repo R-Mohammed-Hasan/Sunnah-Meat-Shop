@@ -1,0 +1,144 @@
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-image: linear-gradient(45deg, rgba(255, 241, 43, 0.6), rgb(165, 250, 221), rgba(216, 212, 163, 0.6));
+}
+
+h1 {
+    margin-left: 42%;
+}
+
+.hr {
+    border: 2px solid black;
+    width: 23%;
+}
+
+form {
+    width: 25vw;
+    height: 40vh;
+    margin-right: 13%;
+    margin-top: 9%;
+    border-radius: 10px;
+    background-color: white;
+    float: right;
+    padding: 5% 6%;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.inputs {
+    margin: 15px;
+}
+
+input[type='tel'],
+input[type='password'],
+input[type='number'] {
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px grey inset;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+input:focus {
+    background-color: bisque;
+}
+
+.cvv {
+    width: 50px;
+}
+
+.submit {
+    margin-left: 2%;
+    font-size: 20px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to top, rgb(2, 226, 226), rgba(131, 128, 128, 0.4));
+}
+
+.reset {
+    margin-left: 2%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to top, white, rgba(131, 128, 128, 0.4));
+}
+
+img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.card {
+    position: absolute;
+    top: 13%;
+    left: 57%;
+    color: white;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(202, 46, 202), rgb(160, 8, 122));
+    width: 400px;
+    height: 220px;
+    padding-top: 15px;
+    border: 2px solid rgba(34, 33, 33, 0.5);
+    box-shadow: 0px 0px 15px black;
+    transition: all .5s;
+}
+
+.card:hover {
+    top: 12%;
+}
+
+.card h2 {
+    margin-left: 75%;
+    display: inline;
+    font-family: fantasy;
+}
+
+.card .sticker {
+    width: 60px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-image: linear-gradient(45deg, rgb(175, 173, 173), white);
+}
+
+.cardNumber {
+    margin: 5px 40px;
+    opacity: 0.9;
+}
+
+.displayCardNumber {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: fantasy;
+    letter-spacing: 3px;
+}
+
+#displayName {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: fantasy;
+    width: 73%;
+    overflow-x: auto;
+}
+
+.expiry {
+    position: absolute;
+    top: 70%;
+    right: 8%;
+}
+
+.gif {
+    margin: 3% 5%;
+}

@@ -115,11 +115,13 @@ marquee {
     font-size: 25px;
     border: 3px outset grey;
     border-radius: 15px;
+    overflow-y: auto;
 }
 
 .div3 {
     width: 30%;
     height: 95%;
+    overflow-y: auto;
     position: absolute;
     right: 1%;
     z-index: 5;
@@ -133,19 +135,23 @@ marquee {
 
 a:link {
     color: black;
+    padding: 7px;
 }
 
 a:visited {
     color: black;
 }
 
-a:hover {
-    transition: all .4s;
-    background-color: black;
+a:hover:not(.navbar a) {
+    background: black;
     color: aqua;
-    padding: 1.5%;
     border-radius: 10px;
+    transition: all .5s;
     text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 .icon {
@@ -204,6 +210,7 @@ input[type=search]:hover {
 .cart {
     background: green;
     color: white;
+    cursor: pointer;
 }
 
 .marquee {
@@ -224,4 +231,66 @@ input[type=search]:hover {
 
 #middleName {
     font-weight: 700;
+}
+
+.addToCart {
+    margin: 10px;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: grabbing;
+}
+
+.itemsList label {
+    visibility: hidden;
+}
+
+.itemsList .dropdown {
+    position: relative;
+    height: 12vh;
+    width: 8vw;
+    float: right;
+}
+
+.itemsList .dropdown label {
+    cursor: pointer;
+}
+
+.itemsList .dropdown input {
+    display: none;
+}
+
+.itemsList .dropdown .editContent {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.editContent a,
+button {
+    font-size: 15px;
+    border: hidden;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.itemsList .dropdown .editContent a:hover,
+button:hover {
+    background-color: wheat;
+    color: black;
+    border-radius: 0%;
+}
+
+.itemsList .dropdown input:checked~.editContent {
+    display: contents;
+}
+
+.moreIcon {
+    position: absolute;
+    right: 10%;
+    top: 35%;
 }

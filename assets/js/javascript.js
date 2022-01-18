@@ -1,6 +1,16 @@
 function navbar() {
     document.querySelector(".navbar").classList.toggle("nav-open")
 }
+let loggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
+console.log(loggedIn);
+if (loggedIn[1] == "admin") {
+    let head = document.getElementsByTagName("head")[0];
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = "./../assets/css/adminSubItems.css";
+    head.appendChild(link);
+}
 
 function plusFunction(idname) {
     let plus = parseInt(document.getElementById(idname).innerHTML);
@@ -122,12 +132,23 @@ if (parsedData == null) {
 function getAndDisplay1() {
     let output1 = ``;
     for (let i in parsedData) {
-        output1 += `<p>
-            <img id="itemImage" src="${parsedData[i].mainImage}" alt="" width="30%" height="100%" style="vertical-align:middle;padding-bottom:10px;padding:5px;">
-            <a href='subItems.html?name=${parsedData[i].name}' style="text-decoration:none;" id="itemName">${parsedData[i].name}</a>
-        </p>
+        output1 += `<div class="itemsList">
+                <img id="itemImage" src="${parsedData[i].mainImage}" alt="" width="30%" height="100%" style="vertical-align:middle;padding-bottom:10px;padding:5px;">
+                <a href='subItems.html?name=${parsedData[i].name}' style="text-decoration:none;" id="itemName">${parsedData[i].name}</a>
+                <div class="dropdown">
+                    <label for="dd_button_${i}">
+                        <img class="moreIcon" src="./../assets/images/moreIcon.svg">
+                    </label>
+                    <input type="checkbox" id="dd_button_${i}">
+                    <div class="editContent">
+                        <a href="./editItem.html?name=${parsedData[i].name}" >Edit</a><br>
+                        <button type="button" onclick = "deleteItem('${i}')">Delete</button>
+                    </div>
+                </div>
+            </div>
         <hr>`
     }
+    //
     document.getElementsByClassName("div1")[0].innerHTML = output1;
 }
 getAndDisplay1();
@@ -170,7 +191,7 @@ function getAndDisplay3(searched) {
                     <dd> Market Price (for 1kg) : ₹ ${varieties[j].marketPrice}</dd><br>
                     <dd> Our discount Price : ₹ ${varieties[j].ourPrice}</dd><br>
                     <dd>
-                    <input style="margin:10px;padding:5px;" onclick="addToCart('${parsedData[i].name}', '${varieties[j].name}','count${j}')" type="button" value="Add to Cart">
+                    <input class="addToCart" onclick="addToCart('${parsedData[i].name}', '${varieties[j].name}','count${j}')" type="button" value="Add to Cart">
                     <input onclick="minusFunction('count${j}')" class="cart" type="button" value="-">
                     <span id="count${j}"> 1 </span>
                     kg <input onclick="plusFunction('count${j}')" class="cart" type="button" value="+">
@@ -196,4 +217,11 @@ function addToCart(itemName, itemVariety, quantityId) {
     };
     cartItems.push(thisItem);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    alert("Your item has been added to Cart");
+}
+
+function deleteItem(index) {
+    parsedData.splice(index, 1);
+    localStorage.setItem("items", JSON.stringify(parsedData));
+    getAndDisplay1();
 }

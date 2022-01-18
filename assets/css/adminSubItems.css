@@ -1,0 +1,3 @@
+.itemsList:hover label {
+    visibility: visible;
+}

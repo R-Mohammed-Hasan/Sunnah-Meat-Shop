@@ -40,6 +40,10 @@ body {
     z-index: 1000;
 }
 
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 .navhead {
     display: flex;
     text-align: center;
@@ -99,7 +103,7 @@ a:visited {
     color: black;
 }
 
-a:hover:not(.emptyCart a) {
+a:hover:not(.emptyCart a, .navbar a) {
     transition: all .4s;
     background-color: black;
     color: aqua;
@@ -192,4 +196,21 @@ td img {
 
 .emptyCart a:hover {
     cursor: pointer;
+}
+
+#placeOrder {
+    font-size: 25px;
+    padding: 10px 3%;
+    font-family: Georgia, serif;
+    background-color: rgb(223, 148, 8);
+    color: white;
+    border-radius: 5px;
+    float: right;
+    margin: 1% 10%;
+    cursor: pointer;
+    display: none;
+}
+
+#placeOrder:hover {
+    opacity: 85%;
 }

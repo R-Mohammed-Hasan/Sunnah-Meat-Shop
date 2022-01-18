@@ -1,0 +1,107 @@
+body {
+    background: url('../images/forgot1.webp') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.submit {
+    background: black;
+    border-radius: 10px;
+    color: white;
+    font-size: inherit;
+    border: 2px solid white;
+    margin-top: 30px;
+    font-family: inherit;
+    padding: 9px 13px;
+}
+
+.submit:hover {
+    border: 2px solid black;
+    background: lightgreen;
+    color: black;
+}
+
+.hr {
+    border: 2px solid black;
+    width: 90%;
+}
+
+.left {
+    background: skyblue;
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+.title::first-letter {
+    font-size: 60px;
+    animation: mymove 3s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+input {
+    padding: 9px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-bottom: 3px solid black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Rampart One', cursive;
+}
+
+img {
+    margin-top: 10%;
+    margin-left: 4%;
+    border-radius: 60px;
+}
+
+a:link {
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    padding: 7px 15px;
+}
+
+a:hover {
+    border: 2px solid black;
+    background: lightgreen;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}

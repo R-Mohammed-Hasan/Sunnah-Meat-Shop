@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/css/payment.css">
+</head>
+
+<body>
+    <h1>Payment Page</h1>
+    <hr class="hr">
+    <div class="card">
+        <h2>VISA</h2>
+        <div class="sticker"></div>
+        <div class="cardNumber">
+            <div>Card Number :</div>
+            <span class="displayCardNumber" id="displayCardNumber1"></span>&nbsp;
+            <span class="displayCardNumber" id="displayCardNumber2"></span>&nbsp;
+            <span class="displayCardNumber" id="displayCardNumber3"></span>&nbsp;
+            <span class="displayCardNumber" id="displayCardNumber4"></span>&nbsp;
+
+            <div>Card Holder Name :</div>
+            <div id="displayName"></div>
+            <div class="expiry">
+                <div>Expires :</div>
+                <div id="displayExpiry"></div>
+            </div>
+        </div>
+
+    </div>
+    <form onsubmit="onSubmitHandler(event)">
+        <div class="inputs"> CARD NUMBER :<br>
+            <input type="tel" maxlength="4" id="cardNumber1" class="cvv" title="Enter a 4 digit proper Card number " pattern="[0-9]{4}" required> -
+            <input type="tel" maxlength="4" id="cardNumber2" class="cvv" title="Enter a 4 digit proper Card number " pattern="[0-9]{4}" required> -
+            <input type="tel" maxlength="4" id="cardNumber3" class="cvv" title="Enter a 4 digit proper Card number " pattern="[0-9]{4}" required> -
+            <input type="tel" maxlength="4" id="cardNumber4" class="cvv" title="Enter a 4 digit proper Card number " pattern="[0-9]{4}" required>
+        </div>
+        <div class="inputs">
+            CARD HOLDER NAME : <br>
+            <input type="tel" id="cardName" title="Enter proper Name as written in Card" pattern="[A-Za-z ]{4,}" placeholder="Enter Full Name">
+        </div>
+        <div class="inputs"> ENTER YOUR CVV NUMBER :<br>
+            <input type="password" placeholder="CVV" maxlength="3" pattern="[0-9]{3}" class="cvv" id="cvv" required>
+        </div>
+        <div class="inputs"> Expiry Date :
+            <input type="number" class="cvv" placeholder="MM" max="12" id="expiryMonth" pattern="[0-9]{2}" required> /
+            <input class="cvv" type="number" min="21" max="50" placeholder="YY" id="expiryYear" pattern="[0-9]{2}" required>
+        </div>
+        <br>
+        <button type="submit" class="submit"><img src="./../assets/images/lock.svg" alt="icon">Proceed to Pay</button>
+        <button type="reset" class="reset">Reset</button>
+
+    </form>
+    <img class="gif" src="./../assets/images/payment.gif" alt="">
+
+    <script src="./../assets/js/payment.js"></script>
+</body>
+
+</html>
