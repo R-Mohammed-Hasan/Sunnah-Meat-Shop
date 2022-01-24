@@ -208,9 +208,39 @@ td img {
     float: right;
     margin: 1% 10%;
     cursor: pointer;
-    display: none;
 }
 
 #placeOrder:hover {
     opacity: 85%;
+}
+
+.address {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: monospace;
+    margin-left: 15%;
+    display: inline;
+    display: none;
+}
+
+.address textarea {
+    vertical-align: middle;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+#mobileNumber {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#mobileNumber:focus {
+    box-shadow: 0px 0px 10px inset;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
 }

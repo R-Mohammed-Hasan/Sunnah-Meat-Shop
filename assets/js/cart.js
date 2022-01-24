@@ -1,6 +1,10 @@
 let parsedData = JSON.parse(localStorage.getItem("cartItems"));
 let totalItems = JSON.parse(localStorage.getItem("items"));
 
+let orders = [];
+let ordersExisitng = JSON.parse(localStorage.getItem("orders"));
+orders = ordersExisitng ? ordersExisitng : [];
+
 function navbar() {
     document.querySelector(".navbar").classList.toggle("nav-open");
 }
@@ -42,6 +46,7 @@ function minusFunction(quantityId, displayVarietyPrice, variety, varietyPrice) {
 var totalAmount = 0;
 
 function displayItems() {
+    totalAmount = 0;
     let output = ``;
     let i = 0;
     let j = 0;
@@ -74,52 +79,77 @@ function displayItems() {
                     }
                 }
             }
-            document.getElementById("insertingItems").innerHTML = `<tr>
-    <th scope="row">Item No.</th>
-    <th scope="row">Item</th>
-    <th scope="row">Variety</th>
-    <th scope="row">Quantity</th>
-    <th scope="row">Price</th>
-    <th scope="row">Remove Item</th>
-</tr>
-    ${output}
-    <tr>
-        <td colspan="4"><h2>Total Amount = </h2></td>
-        <td colspan="2"><span id="totalAmount">₹ ${totalAmount}</span></td>
-    </tr>`
-            let order = document.getElementById("placeOrder");
-            order.innerHTML = "Place Order";
-            order.style.display = "block";
+
         }
+        document.getElementById("insertingItems").innerHTML = `<tr>
+        <th scope="row">Item No.</th>
+        <th scope="row">Item</th>
+        <th scope="row">Variety</th>
+        <th scope="row">Quantity</th>
+        <th scope="row">Price</th>
+        <th scope="row">Remove Item</th>
+    </tr>
+        ${output}
+        <tr>
+            <td colspan="4"><h2>Total Amount = </h2></td>
+            <td colspan="2"><span id="totalAmount">₹ ${totalAmount}</span></td>
+        </tr>`
+        let order = document.getElementsByClassName("address")[0];
+        order.style.display = "block";
     }
 }
 displayItems();
 
 function removeItem(index) {
-    if (index == 0) {
-        window.location.reload();
-    }
     parsedData.splice(index, 1);
     localStorage.setItem("cartItems", JSON.stringify(parsedData));
     displayItems();
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    console.log(typeof cartItems);
+    console.log(cartItems);
+    isEmptyCart();
 }
 
-let orders = [];
-let ordersExisitng = JSON.parse(localStorage.getItem("orders"));
-orders = ordersExisitng ? ordersExisitng : [];
+// If cart is empty need to display "Cart is empty"
 
-function placeOrder() {
+function isEmptyCart() {
+    let cart = document.getElementById("insertingItems");
+    let emptyMessage = `<th scope="row">
+    <div class="emptyCart">
+        Your Cart is empty <br> <button><a href="./subItems.html"> Add Now ?</a></button>
+    </div>
+</th>`
+    if (cart.rows.length < 3) {
+        cart.innerHTML = emptyMessage;
+        document.querySelector(".address").style.display = "none";
+    }
+}
+isEmptyCart();
+
+
+function placingOrder(event) {
+    event.preventDefault();
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    let address = document.querySelector("#address").value;
+    let mobileNumber = document.querySelector("#mobileNumber").value;
     let items = {
         items: cartItems,
         amount: totalAmount,
-        payment: false
+        payment: false,
+        delivered: false,
+        address: address,
+        mobileNumber: mobileNumber
     }
     orders.push(items);
     localStorage.setItem("orders", JSON.stringify(orders));
-    if (!items.payment) {
-        window.location.href = "./payment.html";
-        alert("Please make payment to place the order");
+    let logged = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (logged) {
+        if (!items.payment) {
+            window.location.href = "./payment.html";
+            alert("Please make payment to place the order");
+        }
+    } else {
+        alert("Please login first");
+        window.location.href = "./login.html";
     }
-
 }

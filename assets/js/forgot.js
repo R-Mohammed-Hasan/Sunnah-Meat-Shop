@@ -8,7 +8,7 @@ function onSubmitHandler(event) {
     if (doesExist(mailId, number) != false) {
         console.log(isExist);
         localStorage.setItem("forgotPassword", JSON.stringify(isExist));
-        window.location.href = "./OTP.html";
+        window.location.href = "./otp.html";
     } else {
         document.getElementById("error").innerHTML = "<font color=red> Invalid E-mail or Mobile number !! </font>";
         document.getElementById("error").style.cssText = "display :contents";

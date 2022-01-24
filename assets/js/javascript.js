@@ -1,15 +1,14 @@
-function navbar() {
-    document.querySelector(".navbar").classList.toggle("nav-open")
-}
 let loggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
 console.log(loggedIn);
-if (loggedIn[1] == "admin") {
-    let head = document.getElementsByTagName("head")[0];
-    let link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    link.href = "./../assets/css/adminSubItems.css";
-    head.appendChild(link);
+if (loggedIn) {
+    if (loggedIn[1] == "admin") {
+        let head = document.getElementsByTagName("head")[0];
+        let link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "./../assets/css/adminSubItems.css";
+        head.appendChild(link);
+    }
 }
 
 function plusFunction(idname) {
@@ -148,7 +147,6 @@ function getAndDisplay1() {
             </div>
         <hr>`
     }
-    //
     document.getElementsByClassName("div1")[0].innerHTML = output1;
 }
 getAndDisplay1();
@@ -178,13 +176,14 @@ function getAndDisplay2() {
 
 function getAndDisplay3(searched) {
     let output3 = ``;
-    for (let i in parsedData) {
-        const varieties = parsedData[i].varieties;
-        let storageItemName = parsedData[i].name;
-        const len = varieties.length;
-        for (let j = 0; j < len; j++) {
-            if (searched == storageItemName) {
-                output3 += `<dl>
+    if (searched) {
+        for (let i in parsedData) {
+            const varieties = parsedData[i].varieties;
+            let storageItemName = parsedData[i].name;
+            const len = varieties.length;
+            for (let j = 0; j < len; j++) {
+                if (searched == storageItemName) {
+                    output3 += `<dl>
             <dt>
                 <h2>&nbsp;${varieties[j].name} :</h2>
                     </dt>
@@ -198,11 +197,14 @@ function getAndDisplay3(searched) {
                     </dd>
                 </dl>
                `
+                }
             }
+            document.getElementsByClassName("div3")[0].innerHTML = output3;
         }
-        document.getElementsByClassName("div3")[0].innerHTML = output3;
     }
 }
+
+// Adding an item to Cart by getting existing data from storage and pushing into it
 
 function addToCart(itemName, itemVariety, quantityId) {
     console.log((itemName));
@@ -219,6 +221,8 @@ function addToCart(itemName, itemVariety, quantityId) {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     alert("Your item has been added to Cart");
 }
+
+// For deleting an item
 
 function deleteItem(index) {
     parsedData.splice(index, 1);
