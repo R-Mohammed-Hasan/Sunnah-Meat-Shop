@@ -90,7 +90,7 @@ body {
 }
 
 .search-box input {
-    width: 100%;
+    width: 70%;
     height: 100%;
     border: none;
     border-radius: 50px;
@@ -145,7 +145,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 25px;
-    color: #fff;
+    color: rgb(255, 254, 254);
     cursor: pointer;
     transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -159,7 +159,8 @@ body {
     text-align: center;
     padding-top: 7px;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     word-wrap: break-word;
 }
 

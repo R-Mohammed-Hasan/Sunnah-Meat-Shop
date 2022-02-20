@@ -138,7 +138,7 @@ function getAndDisplay1() {
                     <label for="dd_button_${i}">
                         <img class="moreIcon" src="./../assets/images/moreIcon.svg">
                     </label>
-                    <input type="checkbox" id="dd_button_${i}">
+                    <input type="checkbox" id="dd_button_${i}" class="editOption">
                     <div class="editContent">
                         <a href="./editItem.html?name=${parsedData[i].name}" >Edit</a><br>
                         <button type="button" onclick = "deleteItem('${i}')">Delete</button>
@@ -149,12 +149,12 @@ function getAndDisplay1() {
     }
     document.getElementsByClassName("div1")[0].innerHTML = output1;
 }
-getAndDisplay1();
-getAndDisplay2();
+
 
 function getAndDisplay2() {
     let searched = new URLSearchParams(location.search);
     let searchedItem = searched.get("name");
+    console.log(searchedItem);
     let output2 = ``;
 
     for (let i in parsedData) {
@@ -162,19 +162,25 @@ function getAndDisplay2() {
         if (searchedItem == storageItemName) {
             output2 = ` <p>
     <ol><u id="middleName">${parsedData[i].name}</u> :<br><br>
-       <div><img src='${parsedData[i].image1}' alt="" width="60%" height="25%" style="vertical-align:middle;border-radius:15px;"> 1. Normal Chicken</div><br>
-       <div><img src='${parsedData[i].image2}' alt="" width='60%' height="25%" style="vertical-align:middle;border-radius:15px;"> 2. Country Chicken</div>
+       <div>
+            <img src='${parsedData[i].image1}' alt="" width="60%" height="25%" style="vertical-align:middle;border-radius:15px;">
+                1. Normal Chicken
+        </div><br>
+       <div>
+       <img src='${parsedData[i].image2}' alt="" width='60%' height="25%" style="vertical-align:middle;border-radius:15px;">
+        2. Country Chicken
+        </div>
     </ol>
 </p>
 `
         }
     }
     document.getElementsByClassName("div2")[0].innerHTML = output2;
-
     getAndDisplay3(searchedItem);
 }
 
 function getAndDisplay3(searched) {
+    console.log("3");
     let output3 = ``;
     if (searched) {
         for (let i in parsedData) {
@@ -229,3 +235,10 @@ function deleteItem(index) {
     localStorage.setItem("items", JSON.stringify(parsedData));
     getAndDisplay1();
 }
+
+
+function navbar() {
+    document.querySelector(".navbar").classList.toggle("nav-open")
+}
+getAndDisplay1();
+getAndDisplay2();

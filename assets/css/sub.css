@@ -250,8 +250,9 @@ input[type=search]:hover {
 .itemsList .dropdown {
     position: relative;
     height: 12vh;
-    width: 8vw;
+    width: 5vw;
     float: right;
+    transform: translateY(10px);
 }
 
 .itemsList .dropdown label {
@@ -267,7 +268,6 @@ input[type=search]:hover {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    transform: translateY(100px);
 }
 
 .editContent a,

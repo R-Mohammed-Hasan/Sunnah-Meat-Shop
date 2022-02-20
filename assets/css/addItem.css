@@ -27,6 +27,7 @@ form {
 input {
     border-radius: 7px;
     padding: 5px;
+    width: 250px;
 }
 
 input:focus {

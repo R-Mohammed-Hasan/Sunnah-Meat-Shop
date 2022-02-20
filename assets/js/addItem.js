@@ -29,7 +29,7 @@ function onSubmitHandler(event) {
         }]
     };
     for (i of parsedData) {
-        if (i.name != nameOfItem) {
+        if (i.name.toLowerCase() != nameOfItem.toLowerCase()) {
             isExist = false;
             break;
         } else {

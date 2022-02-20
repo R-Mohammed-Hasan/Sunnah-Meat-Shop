@@ -28,7 +28,7 @@ function plusFunction(quantityId, displayVarietyPrice, variety, varietyPrice) {
 function minusFunction(quantityId, displayVarietyPrice, variety, varietyPrice) {
     let calculatedRate = 0;
     let quantity = parseInt(document.getElementById(quantityId).innerHTML);
-    if (quantity > 0) {
+    if (quantity > 1) {
         quantity -= 1;
         calculatedRate = quantity * parseInt(varietyPrice);
         document.getElementById(displayVarietyPrice).innerHTML = calculatedRate;
