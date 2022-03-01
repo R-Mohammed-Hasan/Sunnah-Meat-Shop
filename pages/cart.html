@@ -8,7 +8,7 @@
     <title>Cart Page</title>
     <link rel="stylesheet" href="./../assets/css/cart.css">
     <link rel="stylesheet" href="./../assets/images/sunnah logo.jpg">
-
+    <link rel="icon" href="./../assets/images/sunnah logo.jpg">
 
 </head>
 
@@ -44,26 +44,25 @@
         </div>
     </nav>
     <main>
-        <table id="insertingItems" border="8">
+        <table id="insertingItems" border="1px">
             <caption></caption>
-            <th scope="col"></th>
+            <th scope=" col "></th>
 
 
 
         </table>
-        <div class="address">
-            <form onsubmit="placingOrder(event)">
+        <div class="address ">
+            <form onsubmit="placingOrder(event) ">
                 <span>Please enter your address : </span>
-                <textarea name="address" id="address" cols="50" rows="6" placeholder="Please enter proper address" title="Sorry, this is not a proper address" pattern="[A-Za-b ,.]{20,}" required></textarea>
-                <br><br> Enter our mobile number : <input type="tel" title="Please enter only number" pattern="[0-9]{10}" id="mobileNumber" required>
-                <button id="placeOrder" type="submit">Place Order</button>
+                <textarea name="address" id="address" cols="50 " rows="6 " placeholder="Please enter proper address " title="Sorry, this is not a proper address " pattern="[A-Za-b ,.]{20,} " required></textarea>
+                <br><br> Enter our mobile number : <input type="tel" title="Please enter only number " pattern="[0-9]{10} " id="mobileNumber" required>
+                <button id="placeOrder" type="submit ">Place Order</button>
             </form>
         </div>
     </main>
-    <video muted autoplay width="100%">
+    <video muted autoplay width="100% ">
         <source src="./../assets/videos/cart.mp4">
         <track kind="subtitles"></track>
-
     </video>
 
     <script src="./../assets/js/cart.js"></script>

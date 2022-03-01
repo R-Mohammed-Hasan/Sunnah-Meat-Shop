@@ -14,11 +14,12 @@ function searchButton() {
         searchInput.classList.add("active");
         cancelBtn.classList.add("active");
         searchInput.focus();
-        let searched = searchInput.value.replace(/ +/g, "");
+        let searched = searchInput.value.replace(/ +/g, "").toLowerCase();
 
         if (searchInput.value != "") {
             switch (searched) {
                 case "chicken":
+                    console.log("Chicken");
                     window.open("./subItems.html?name=Chicken");
                     break;
                 case "chickeneggs":

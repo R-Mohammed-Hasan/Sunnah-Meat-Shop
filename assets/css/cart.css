@@ -182,6 +182,7 @@ td img {
     background-color: black;
     color: white;
     cursor: pointer;
+    font-size: 15px;
 }
 
 #totalAmount {
