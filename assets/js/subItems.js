@@ -14,30 +14,27 @@ window.addEventListener("click", (event) => {
 function searchingData() {
     let searched = document.getElementById("searchingBox");
     if (searched.value != "") {
-        switch (searched.value.toLowerCase().trim()) {
+        switch (searched.value.replace(/ +/g, "").toLowerCase()) {
             case "chicken":
-                window.open("./subItems.html?name=chicken");
+                window.open("./subItems.html?name=Chicken");
                 break;
             case "chickeneggs":
-                window.open("./subItems.html?name=chicken_eggs");
+                window.open("./subItems.html?name=Chicken Eggs");
                 break;
             case "mutton":
-                window.open("./subItems.html?name=mutton");
+                window.open("./subItems.html?name=Mutton");
                 break;
-            case "chicken":
-                window.open("./subItems.html?name=kadai");
+            case "kadai":
+                window.open("./subItems.html?name=Kadai");
                 break;
-            case "chicken":
-                window.open("./subItems.html?name=kadai_eggs");
+            case "kadaieggs":
+                window.open("./subItems.html?name=Kadai Eggs");
                 break;
-            case "chicken":
-                window.open("./subItems.html?name=duck");
-                break;
-            case "chicken":
-                window.open("./subItems.html?name=chicken");
+            case "duck":
+                window.open("./subItems.html?name=Duck");
                 break;
             case "eggs":
-                window.open("./subItems.html?name=chicken_eggs");
+                window.open("./subItems.html?name=Chicken Eggs");
                 break;
             default:
                 alert("Sorry, no Item found in this name");

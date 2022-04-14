@@ -215,8 +215,8 @@ input[type=search]:hover {
 
 .marquee {
     animation: marquee 25s linear infinite;
-    font-size: 23px;
-    font-weight: 530;
+    font-size: 24px;
+    font-weight: 540;
     margin-bottom: 1%;
 }
 

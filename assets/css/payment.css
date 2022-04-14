@@ -2,7 +2,7 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
@@ -119,16 +119,16 @@ img {
 }
 
 .displayCardNumber {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 100;
     font-family: fantasy;
     letter-spacing: 3px;
 }
 
 #displayName {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: fantasy;
+    font-size: 23px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
     width: 73%;
     overflow-x: auto;
 }

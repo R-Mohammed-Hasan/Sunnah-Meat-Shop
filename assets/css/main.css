@@ -182,8 +182,8 @@ body {
 
 .marquee {
     animation: marquee 25s linear infinite;
-    font-size: 23px;
-    font-weight: 530;
+    font-size: 24px;
+    font-weight: 540;
     margin-bottom: 1%;
 }
 
@@ -200,12 +200,20 @@ body {
     width: 30%;
     height: 100%;
     border-top-right-radius: 20px;
-    position: fixed;
-    margin-left: 15px;
+    /* position: fixed; */
+    margin-left: 20px;
     font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
     font-weight: 700;
+}
+
+.nameOfItems {
+    position: absolute;
+    top: 35px;
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+    left: 15px;
 }
 
 .div1 img:hover {
@@ -243,7 +251,7 @@ body {
     margin-top: 130px;
     position: absolute;
     background: yellow;
-    width: 360px;
+    width: 370px;
     height: 100px;
     left: -195px;
     transition: left .6s;
@@ -305,7 +313,7 @@ body {
     font-size: 20px;
 }
 
-a:link {
+a:link:not(.nameOfItems) {
     color: black;
     text-decoration: none;
 }

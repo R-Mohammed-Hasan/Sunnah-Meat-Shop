@@ -8,14 +8,21 @@ body {
 
 table {
     border-collapse: collapse;
-    margin: 1%;
+    border: 3px solid black;
+    margin: 3% 1%;
     width: 98%;
     background-color: rgb(240, 213, 138);
     font-size: 20px;
 }
 
-tr {
+thead {
+    background-color: rgb(99, 98, 98);
+    color: aliceblue;
+}
+
+tbody tr {
     text-align: center;
+    background-color: rgb(255, 255, 255);
 }
 
 th,
