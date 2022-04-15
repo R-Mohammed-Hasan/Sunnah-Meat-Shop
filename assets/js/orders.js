@@ -10,12 +10,13 @@ function setData() {
     for (i of orders) {
         let itemsName = i.items;
         let j = 0;
-        let items = "";
+        let items = "<ol>";
         let quantity = "";
         for (j of itemsName) {
-            items += j.itemVariety + "<br>";
-            quantity += j.quantity + "<br>";
+            items += `<li> ${j.itemVariety}</li><br>`;
+            quantity += j.quantity + "<br><br>";
         }
+        items += "</ol>";
         output += `
         <tr>
         <td >${count}</td>
@@ -42,7 +43,6 @@ function eventsForDeliveryStatus() {
         let currentTag = document.getElementById(`deliveryStatus_${count++}`);
         currentTag.onchange = dummy;
     }
-
 }
 
 function dummy() {
