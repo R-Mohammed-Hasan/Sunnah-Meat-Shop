@@ -106,7 +106,7 @@ marquee {
     padding-left: 25%;
     padding-top: 20px;
     padding-bottom: 30px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Comfortaa";
     font-weight: 700;
     font-size: 25px;
     border-bottom: 1px solid white;
@@ -121,6 +121,13 @@ marquee {
     z-index: 1000;
     box-shadow: 10px 0px 20px black;
     border-top-right-radius: 20px;
+}
+
+.fas {
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 27px;
+    transform: translateY(-3px);
 }
 
 .div2 {
@@ -148,8 +155,7 @@ marquee {
     text-align: justify;
     background: white;
     box-shadow: 5px 5px 10px grey, 0px -5px 10px grey;
-    /* border-left: 3px solid green; */
-    /* border-radius: 15px; */
+    border-left: 4px solid green;
     font-size: 20px;
 }
 
@@ -208,7 +214,7 @@ input[type=search] {
     font-size: 15px;
     width: 180px;
     height: 33px;
-    transition: width 2s;
+    transition: width 1s;
     padding: 0px 10px;
 }
 
@@ -293,20 +299,24 @@ input[type=search]:hover {
     height: 100vh;
 }
 
-.editContent a,
-button {
+.editContent button {
+    font-family: monospace;
     font-size: 18px;
     border: hidden;
     text-decoration: none;
     padding: 5px;
-    font-weight: 700;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.editContent button:nth-child(1) {
+    margin-left: 10px;
 }
 
 .itemsList .dropdown .editContent a:hover,
 button:hover {
-    background-color: wheat;
-    color: black;
-    border-radius: 0%;
+    background-color: rgb(208, 208, 208);
+    cursor: pointer;
 }
 
 .itemsList .dropdown input:checked~.editContent {
@@ -317,4 +327,99 @@ button:hover {
     position: absolute;
     right: 10%;
     top: -5%;
+}
+
+.editForm {
+    overflow: auto;
+    position: fixed;
+    top: 6%;
+    left: 35%;
+    width: 35%;
+    border-radius: 7px;
+    height: 90%;
+    font-family: "Comfortaa", "cursive";
+    z-index: 10;
+    transform: rotateY(90deg);
+    transition: .3s all;
+}
+
+.closeIcon {
+    border-radius: 100%;
+    cursor: pointer;
+    width: 8%;
+    margin-left: 90%;
+}
+
+.closeIcon:hover {
+    opacity: 0.8;
+}
+
+form {
+    border: 3px solid black;
+    background-color: rgba(255, 255, 255, 0.922);
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transform: translateY(180deg);
+}
+
+form input:not(input[type="image"]) {
+    border-radius: 7px;
+    padding: 5px;
+    width: 250px;
+}
+
+form input:focus {
+    box-shadow: 0px 0px 7px inset;
+    outline: none;
+    transition: all .5s;
+}
+
+form input[type='submit'],
+input[type="reset"] {
+    background-color: aqua;
+    padding: 10px 0px;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    border: 2px solid black;
+    margin: 2%;
+    transition: all .3s;
+}
+
+input[type="reset"] {
+    color: red;
+    background-color: white;
+    border: 2px solid red;
+}
+
+input[type="reset"]:hover {
+    background-color: red;
+    color: aliceblue;
+}
+
+form input[type='submit']:hover {
+    background-color: rgb(36, 234, 234);
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+form h2 {
+    text-decoration: underline;
+}
+
+form div {
+    margin: 3%;
+}
+
+#error {
+    letter-spacing: 2px;
 }

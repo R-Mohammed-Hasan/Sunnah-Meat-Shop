@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Rampart+One&display=swap">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./../assets/css/sub.css">
     <link rel="icon" href="./../assets/images/sunnah logo.jpg">
     <link rel="stylesheet" href="./../assets/css/loading.css">
@@ -25,6 +26,27 @@
         <span>.</span>
         <span>.</span>
         <span>.</span>
+    </div>
+
+    <div class="editForm">
+        <form align='center' onsubmit="onSubmitHandler()">
+            <div><img class="closeIcon" onclick="closeEditForm()" src="./../assets/images/closeIcon.jpg" alt=""></div>
+            <div> Name of Item : <input type="text" name="" id="name" autofocus required></div>
+            <div>Main Image : <input type="url" name="" id="mainImage" required>
+            </div>
+            <h2>Varieties</h2>
+            <div>Variety 1 Name : <input type="text" name="" id="variety1Name" required></div>
+            <div>Image : <input type="url" name="" id="image1" required></div>
+            <div>Market Price : ₹ <input type="number" name="" id="marketPrice1" required></div>
+            <div>Discount Price : ₹ <input type="number" name="" id="ourPrice1" required></div>
+            <div>Variety 2 Name : <input type="text" name="" id="variety2Name" required></div>
+            <div>Image : <input type="url" name="" id="image2" required></div>
+            <div>Market Price : ₹ <input type="number" name="" id="marketPrice2" required></div>
+            <div>Discount Price : ₹ <input type="number" name="" id="ourPrice2" required></div>
+            <div id="error"></div>
+            <div><input type="submit" value="Edit Item"><input type="reset" value="Clear All"></div>
+
+        </form>
     </div>
 
     <div class="topic">
@@ -44,10 +66,10 @@
         <h1 class="sunnah"><img src="./../assets/images/sunnah logo.jpg" alt="" width='15%' style="vertical-align:middle;margin-right:2%;"> Sunnah Meat Shop
         </h1>
         <input id="searchingBox" type="search" name="search" placeholder="Search your product" style="border-radius:15px;vertical-align: middle;">
-        <img src="./../assets/images/search.png" alt="" width="35px" height="30px" style="vertical-align:middle;cursor: pointer;" onclick="searchingData()">
-        <span style="margin:2%;" title="Our Home Page">HOME</span>
-        <a href="login.html" style="margin:2%;padding:.5%;">LOGIN</a>
-        <a href="Sign up.html" style="margin:2%;margin-right:5%;padding:.5%;">BECOME A MEMBER</a>
+        <em class="fas fa-search" onclick="searchingData()"></em>
+        <span style="margin:2%;font-size: 19px;" title="Our Home Page">HOME</span>
+        <a href="login.html" style="margin:2%;padding:.6%;font-size: 19px;">LOGIN</a>
+        <a href="Sign up.html" style="margin:2%;margin-right:5%;padding:.6%;font-size: 19px;">BECOME A MEMBER</a>
         <hr>
     </div>
     <div class="marquee"><em>We deliver Meat on monthly subscription (prepaid) and order basis.
