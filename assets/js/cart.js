@@ -129,6 +129,8 @@ isEmptyCart();
 
 function placingOrder(event) {
     event.preventDefault();
+    let logged = JSON.parse(localStorage.getItem("loggedInUser"));
+
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
     let address = document.querySelector("#address").value;
     let mobileNumber = document.querySelector("#mobileNumber").value;
@@ -141,15 +143,16 @@ function placingOrder(event) {
         mobileNumber: mobileNumber
     }
     orders.push(items);
-    localStorage.setItem("orders", JSON.stringify(orders));
-    let logged = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (logged) {
+    if (!logged) {
+        alert("Please login first");
+        window.location.href = "./login.html";
+        return;
+    } else {
         if (!items.payment) {
             window.location.href = "./payment.html";
             alert("Please make payment to place the order");
         }
-    } else {
-        alert("Please login first");
-        window.location.href = "./login.html";
     }
+    localStorage.setItem("orders", JSON.stringify(orders));
+
 }

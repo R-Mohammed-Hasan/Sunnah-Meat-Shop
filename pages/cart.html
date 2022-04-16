@@ -9,10 +9,19 @@
     <link rel="stylesheet" href="./../assets/css/cart.css">
     <link rel="stylesheet" href="./../assets/images/sunnah logo.jpg">
     <link rel="icon" href="./../assets/images/sunnah logo.jpg">
+    <link rel="stylesheet" href="./../assets/css/loading.css">
+    <script type="text/javascript" src="./../assets/js/loading.js"></script>
 
 </head>
 
 <body>
+    <div class="loading">
+        <div class="load"> Loading</div>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </div>
+
     <div class="topic">
         <input type="image" alt="input" src="./../assets/images/icon.png" width='4%' class="icon" onclick="navbar()">
         <div class="navbar">
@@ -22,10 +31,10 @@
             </p><br>
             <hr class="hr">
             <p class="navhead"><a href="./home.html">Home</a></p>
-            <p class="navhead"><a href="./home.html">Contact Us</a></p>
+            <p class="navhead"><a href="mailto:sunnah@gmail.com">Contact Us</a></p>
             <p class="navhead"><a href="./cart.html">Cart</a></p>
-            <p class="navhead"><a href="./cart.html">Edit Items</a></p>
-            <p class="navhead"><a href="./cart.html">Orders</a></p>
+            <p class="navhead"><a href="./subItems.html">Edit Items</a></p>
+            <p class="navhead"><a href="./orders.html">Orders</a></p>
 
 
         </div>
@@ -52,7 +61,7 @@
 
         </table>
         <div class="address ">
-            <form onsubmit="placingOrder(event) ">
+            <form onsubmit="placingOrder(event)">
                 <span>Please enter your address : </span>
                 <textarea name="address" id="address" cols="50 " rows="6 " placeholder="Please enter proper address " title="Sorry, this is not a proper address " pattern="[A-Za-b ,.]{20,} " required></textarea>
                 <br><br> Enter our mobile number : <input type="tel" title="Please enter only 10 numbers " pattern="[0-9]{10}" id="mobileNumber" required>

@@ -2,6 +2,25 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 10px black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(109, 252, 252);
+    height: 100px;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 221, 221);
+}
+
 .sunnah {
     color: white;
     margin-right: 40%;
@@ -107,13 +126,12 @@ marquee {
 .div2 {
     width: 37%;
     height: 95vh;
-    box-shadow: 0px 0px 20px grey;
+    box-shadow: -5px -5px 5px grey, 0px 5px 10px grey;
     left: 31%;
     position: absolute;
     font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
-    border: 3px outset grey;
     border-radius: 15px;
     overflow-y: auto;
 }
@@ -122,14 +140,16 @@ marquee {
     width: 30%;
     height: 95%;
     overflow-y: auto;
+    box-sizing: border-box;
+    padding: 10px;
     position: absolute;
     right: 1%;
     z-index: 5;
     text-align: justify;
     background: white;
-    box-shadow: -5px -5px 20px black;
-    border: 2px inset grey;
-    border-radius: 15px;
+    box-shadow: 5px 5px 10px grey, 0px -5px 10px grey;
+    /* border-left: 3px solid green; */
+    /* border-radius: 15px; */
     font-size: 20px;
 }
 
@@ -185,8 +205,9 @@ a:hover:not(.navbar a) {
 }
 
 input[type=search] {
-    width: 80px;
-    height: 30px;
+    font-size: 15px;
+    width: 180px;
+    height: 33px;
     transition: width 2s;
     padding: 0px 10px;
 }
@@ -252,7 +273,7 @@ input[type=search]:hover {
     height: 12vh;
     width: 5vw;
     float: right;
-    transform: translateY(10px);
+    transform: translateY(45px);
 }
 
 .itemsList .dropdown label {
@@ -266,13 +287,15 @@ input[type=search]:hover {
 .itemsList .dropdown .editContent {
     display: none;
     position: absolute;
+    top: 60%;
+    left: 10%;
     width: 100vw;
     height: 100vh;
 }
 
 .editContent a,
 button {
-    font-size: 15px;
+    font-size: 18px;
     border: hidden;
     text-decoration: none;
     padding: 5px;
@@ -293,5 +316,5 @@ button:hover {
 .moreIcon {
     position: absolute;
     right: 10%;
-    top: 35%;
+    top: -5%;
 }

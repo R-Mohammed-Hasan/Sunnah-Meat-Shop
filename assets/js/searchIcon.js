@@ -1,6 +1,6 @@
 // For search Button
 
-window.onload = searchButton()
+window.onload = searchButton();
 
 function searchButton() {
     const searchBox = document.querySelector(".search-box");
