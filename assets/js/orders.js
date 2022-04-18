@@ -35,7 +35,7 @@ function setData() {
         <td>${i.address}</td>
         <td>${ i.mobileNumber}</td>
         <td>${deliveryImg}
-        <select id="deliveryStatus_${count++}">
+        <select id="deliveryStatus_${count++}" data-object='${JSON.stringify(i)}' onchange='setDeliveryStatus(event)'>
                 <option value="progress" ${ i.delivered == true ? "" : "selected"}> In Progress </option>
                 <option value="delivered" ${ i.delivered ? "selected" : ""}>Delivered </option>
             </select>
@@ -49,32 +49,13 @@ function setData() {
     }
 }
 
-function eventsForDeliveryStatus() {
-    let count = 1;
-    for (i of orders) {
-        let currentTag = document.getElementById(`deliveryStatus_${count++}`);
-        currentTag.onchange = dummy;
-    }
-}
-
-function dummy() {
-    let count = 1;
-    for (i of orders) {
-        let currentTag = document.getElementById(`deliveryStatus_${count++}`);
-        setDeliveryStatus(currentTag, i);
-    }
-}
-
-function setDeliveryStatus(currentTag, object) {
-    console.log(currentTag.value);
-    if (currentTag.value == "delivered") {
-        object.delivered = true;
-    } else {
-        object.delivered = false;
-    }
-    console.log(orders);
+function setDeliveryStatus(event) {
+    const element = event.target;
+    let indexOfObject = element.id.charAt(15) - 1;
+    let object = JSON.parse(element.dataset.object);
+    object.delivered = element.value == "delivered" ? true : false;
+    orders[indexOfObject] = object;
     localStorage.setItem("orders", JSON.stringify(orders));
     location.reload();
 }
 setData();
-eventsForDeliveryStatus();

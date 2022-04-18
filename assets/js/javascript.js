@@ -228,7 +228,7 @@ function addToCart(itemName, itemVariety, quantityId) {
 }
 
 function editItem(nameOfItem) {
-    document.querySelector(".editForm").style.transform = "rotateY(0deg)";
+    document.querySelector(".editForm").classList.toggle("open");
     let i = 0;
     let j = 0;
     for (i in parsedData) {
@@ -247,6 +247,7 @@ function editItem(nameOfItem) {
             document.getElementById("ourPrice1").value = parsedData[i].varieties[0].ourPrice;
         }
     }
+
 }
 
 function onSubmitHandler() {
@@ -270,7 +271,7 @@ function onSubmitHandler() {
 }
 
 function closeEditForm() {
-    document.querySelector(".editForm").style.transform = "rotateY(90deg)";
+    document.querySelector(".editForm").classList.toggle("open");
 }
 
 // For deleting an item
