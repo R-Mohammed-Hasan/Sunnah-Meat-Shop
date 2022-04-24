@@ -35,7 +35,7 @@ function setData() {
         <td>${i.address}</td>
         <td>${ i.mobileNumber}</td>
         <td>${deliveryImg}
-        <select id="deliveryStatus_${count++}" data-object='${JSON.stringify(i)}' onchange='setDeliveryStatus(event)'>
+        <select id="deliveryStatus_${count++}" data-length="${count -2}" data-object='${JSON.stringify(i)}' onchange='setDeliveryStatus(event)'>
                 <option value="progress" ${ i.delivered == true ? "" : "selected"}> In Progress </option>
                 <option value="delivered" ${ i.delivered ? "selected" : ""}>Delivered </option>
             </select>
@@ -51,7 +51,7 @@ function setData() {
 
 function setDeliveryStatus(event) {
     const element = event.target;
-    let indexOfObject = element.id.charAt(15) - 1;
+    let indexOfObject = element.dataset.length;
     let object = JSON.parse(element.dataset.object);
     object.delivered = element.value == "delivered" ? true : false;
     orders[indexOfObject] = object;
