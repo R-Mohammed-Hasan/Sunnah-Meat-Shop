@@ -125,7 +125,11 @@ if (parsedData == null) {
         }
     ];
     localStorage.setItem("items", JSON.stringify(contents));
+    parsedData = JSON.parse(localStorage.getItem("items"));
 }
+
+getAndDisplay1();
+getAndDisplay2();
 
 function getAndDisplay1() {
     let output1 = ``;
@@ -286,5 +290,3 @@ function deleteItem(index) {
 function navbar() {
     document.querySelector(".navbar").classList.toggle("nav-open")
 }
-getAndDisplay1();
-getAndDisplay2();
